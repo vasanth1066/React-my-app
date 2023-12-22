@@ -2,6 +2,7 @@
 
 import './App.css';
 import Expenses from './Components/Expenses/Expenses';
+import ExpenseForm from './Components/Expenses/ExpenseForm';
 
 
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <div>
       <h2>Let Get Starts</h2>
+      <ExpenseForm/>
       <Expenses item={expense}></Expenses>
     </div>
       
