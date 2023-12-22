@@ -2,7 +2,7 @@
 
 import './App.css';
 import Expenses from './Components/Expenses/Expenses';
-import ExpenseForm from './Components/Expenses/ExpenseForm';
+import ExpenseForm from './Components/NewExpense/ExpenseForm';
 
 
 
