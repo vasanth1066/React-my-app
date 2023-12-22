@@ -1,6 +1,8 @@
 //import logo from './logo.svg';
 import './Components/ExpenseItem'
 import './App.css';
+import './Components/ExpenseItem.css'
+import Card from './Components/Card';
 import ExpenseItem from './Components/ExpenseItem';
 
 
@@ -15,7 +17,7 @@ function App() {
     { title: 'Gadgets', date: new Date(2023, 1, 19), location: 'Electronis shop', amount: 1345 }
   ]
   return (
-    <div>
+    <Card className='expenses'>
       <h2>Let Get Starts</h2>
 
     <ExpenseItem title={expense[0].title} date={expense[0].date} amount={expense[0].amount } location={expense[0].location}></ExpenseItem>
@@ -23,7 +25,7 @@ function App() {
     <ExpenseItem title={expense[2].title} date={expense[2].date} amount={expense[2].amount } location={expense[2].location}></ExpenseItem>
     <ExpenseItem title={expense[3].title} date={expense[3].date} amount={expense[3].amount } location={expense[3].location}></ExpenseItem>
     <ExpenseItem title={expense[4].title} date={expense[4].date} amount={expense[4].amount } location={expense[4].location}></ExpenseItem>
-    </div>
+    </Card>
   );
 }
 
