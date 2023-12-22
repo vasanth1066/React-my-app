@@ -1,11 +1,19 @@
 import React,{useState} from 'react';
 import './ExpenseForm.css'
 function ExpenseForm(){
+   
     function ShowDetails(e){
         e.preventDefault();
-        console.log(document.getElementById('titleid').value);
-        console.log(document.getElementById('amountid').value);
-        console.log(document.getElementById('dateid').value);
+        let enteredtitle=document.getElementById('titleid').value
+        let enteredamount=document.getElementById('amountid').value
+        let entereddate=document.getElementById('dateid').value
+        
+        let myobj={
+            title:enteredtitle,
+            amount:enteredamount,
+            date:new Date(entereddate)
+        };
+        console.log(myobj)
         
     }
 
@@ -16,17 +24,18 @@ function ExpenseForm(){
 
     function titleChangehadler(e){
         setEneteredtitle(e.target.value);
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
     function amountChangehadler(e){
         setEneteredamount(e.target.value)
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
     function dateChangehadler(e){
         setEnetereddate(e.target.value);
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
     return (
+        
         <div className='new-expense'>
         <form >
             <div className="new-expense__controls">
