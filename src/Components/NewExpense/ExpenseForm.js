@@ -12,6 +12,7 @@ function ExpenseForm(props){
         // let enteredamount=document.getElementById('amountid').value
         // let entereddate=document.getElementById('dateid').value
         let myobj={
+            id: Math.random().toString(),
             title:enteredtitle,
             amount:enteredamount,
             date:new Date(entereddate)

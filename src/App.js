@@ -1,20 +1,25 @@
 //import logo from './logo.svg';
+import React ,{ useState } from 'react';
 import './App.css';
 import Expenses from './Components/Expenses/Expenses';
 import ExpenseForm from './Components/NewExpense/ExpenseForm';
 
+let dummyexpense = [
+  { id:'e1',title: 'Insurance', date: new Date(2020, 3, 12), location: 'Home', amount: 3844 },
+  { id:'e2',title: 'Shoping', date: new Date(2021, 4, 22), location: 'Mall', amount: 1000 },
+  { id:'e3',title: 'Gadgets', date: new Date(2023, 1, 19), location: 'Electronis shop', amount: 1345 }
+]
+
 
 function App() {
-  let expense = [
-    { title: 'Insurance', date: new Date(2020, 3, 12), location: 'Home', amount: 3844 },
-    { title: 'Shoping', date: new Date(2021, 4, 22), location: 'Mall', amount: 1000 },
-    { title: 'Rent', date: new Date(2022, 6, 24), location: 'Home', amount: 7000 },
-    { title: 'Electricty bill', date: new Date(2020, 8, 29), location: 'Office', amount: 876 },
-    { title: 'Gadgets', date: new Date(2023, 1, 19), location: 'Electronis shop', amount: 1345 }
-  ]
+
+const [expense,setExpense]=useState(dummyexpense);
+  
   
   function addExpenseHandler (expenses){
-    console.log('in app.js');
+    setExpense((previousExpense)=>{
+        return [expenses,...previousExpense]
+    })
        
   }
   
