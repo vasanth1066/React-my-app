@@ -13,7 +13,7 @@ function ExpenseForm(props) {
     let myobj = {
       id: Math.random().toString(),
       title: enteredtitle,
-      amount: enteredamount,
+      amount: +enteredamount,
       date: new Date(entereddate),
     };
     setEneteredtitle("");
