@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Expenses from "./Components/Expenses/Expenses";
-import ExpenseForm from "./Components/NewExpense/ExpenseForm";
+import NewExpense from "./Components/NewExpense/NewExpense";
 
 let dummyexpense = [
   {
@@ -31,16 +31,16 @@ let dummyexpense = [
 function App() {
   const [expense, setExpense] = useState(dummyexpense);
 
-  function addExpenseHandler(expenses) {
+  const addExpenseHandler = (expenses) => {
     setExpense((previousExpense) => {
       return [expenses, ...previousExpense];
     });
-  }
+  };
 
   return (
     <div>
       <h2>Let Get Starts</h2>
-      <ExpenseForm onAddExpense={addExpenseHandler} />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses item={expense}></Expenses>
     </div>
   );
